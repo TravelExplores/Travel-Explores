@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import connectToDatabase from "../../lib/mongodb"
 import Package from "../../models/Package";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     await connectToDatabase();
@@ -31,5 +33,3 @@ export async function POST(req) {
     return NextResponse.json({ error: "Failed to add package" }, { status: 500 });
   }
 }
-
-export const dynamic = "force-dynamic";
