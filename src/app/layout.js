@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "Travel Explores",
     images: [
       {
-        url: "/logo.png",
+        url: "./logo.png",
         width: 800,
         height: 600,
         alt: "Travel Explores logo",
@@ -32,7 +32,7 @@ export const metadata = {
     type: "website",
   },
   icons: {
-    icon: "/logo.png",
+    icon: "./logo.png",
   },
 };
 
