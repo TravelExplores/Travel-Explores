@@ -47,7 +47,7 @@ function Nav() {
             <li>
               <button
                 onClick={() => scrollToSection("domestic")}
-                className="text-white text-lg hover:text-gray-300 transition"
+                className="text-white text-lg cursor-pointer hover:text-gray-300 transition"
               >
                 Domestic
               </button>
@@ -55,7 +55,7 @@ function Nav() {
             <li>
               <button
                 onClick={() => scrollToSection("international")}
-                className="text-white text-lg hover:text-gray-300 transition"
+                className="text-white text-lg hover:text-gray-300 cursor-pointer transition"
               >
                 International
               </button>
