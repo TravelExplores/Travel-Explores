@@ -61,7 +61,7 @@ ${form.email ? `*Email:* ${form.email}%0A` : ""}
   }
 
   return (
-    <section className="w-full flex items-center justify-center">
+    <section className="w-ful h-screen flex items-center justify-center">
       <Link href="/">
         <div className="bg-black flex items-center justify-center absolute size-10 rounded-full top-5 left-5">
           <i className="text-white text-sm font-semibold fa-solid fa-arrow-left"></i>

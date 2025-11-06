@@ -43,7 +43,7 @@ export default function Card({ city, img }) {
             onClick={(e) => e.stopPropagation()}
             className="w-[40%] h-12 bg-black cursor-pointer hover:bg-black/80 transition-all rounded-xl flex items-center justify-center"
           >
-            <Link href="/enquiry" className="w-full h-full flex items-center justify-center">
+            <Link href={`/enquiry?city=${encodeURIComponent(city)}`} className="w-full h-full flex items-center justify-center">
               <h1 className="font-semibold text-[1rem] md:text-xl text-white">Enquiry Now</h1>
             </Link>
           </div>

@@ -40,7 +40,7 @@ function Nav() {
               </Link>
             </li>
             <li>
-              <Link href="#about" className="text-white text-lg hover:text-gray-300 transition">
+              <Link href="/about" className="text-white text-lg hover:text-gray-300 transition">
                 About
               </Link>
             </li>
@@ -74,7 +74,7 @@ function Nav() {
             <Link href="/" className="text-white font-semibold text-lg">
               Home
             </Link>
-            <Link href="#about" className="text-white font-semibold text-lg">
+            <Link href="/about" className="text-white font-semibold text-lg">
               About
             </Link>
 

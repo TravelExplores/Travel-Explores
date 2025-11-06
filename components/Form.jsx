@@ -1,8 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function Form() {
+
+  const searchParams = useSearchParams();
+  const cityFromQuery = searchParams.get("city") || "";
+
   const [btn, setBtn] = useState(false);
   const [today, setToday] = useState("");
   const [form, setForm] = useState({
@@ -51,6 +56,7 @@ export default function Form() {
 *Name:* ${form.name}
 *Phone:* ${form.phone}
 ${form.email ? `*Email:* ${form.email}\n` : ""}
+*Destination:*${cityFromQuery}
 *Tour Date:* ${form.date}
 *Guests:* ${form.guests}`
     );
@@ -124,11 +130,10 @@ ${form.email ? `*Email:* ${form.email}\n` : ""}
               name="guests"
               value={form.guests}
               onChange={handleChange}
-              className={`p-4 font-semibold text-black border-2 rounded-3xl outline-none transition-all ${
-                errors.guests
+              className={`p-4 font-semibold text-black border-2 rounded-3xl outline-none transition-all ${errors.guests
                   ? "border-red-500"
                   : "border-gray-500 hover:border-black"
-              }`}
+                }`}
             >
               {[...Array(10)].map((_, i) => (
                 <option key={i + 1} value={i + 1}>
@@ -150,9 +155,8 @@ ${form.email ? `*Email:* ${form.email}\n` : ""}
                 setTimeout(() => setBtn(false), 1000);
               }}
               type="submit"
-              className={`cursor-pointer hover:bg-black/80 transition-all h-15 md:w-[30%] w-[70%] ${
-                btn ? "bg-black/80" : "bg-black"
-              } text-white text-lg font-semibold rounded-3xl py-2`}
+              className={`cursor-pointer hover:bg-black/80 transition-all h-15 md:w-[30%] w-[70%] ${btn ? "bg-black/80" : "bg-black"
+                } text-white text-lg font-semibold rounded-3xl py-2`}
             >
               Submit
             </button>
@@ -189,9 +193,8 @@ function FormField({
         onChange={onChange}
         placeholder={placeholder}
         min={min}
-        className={`p-4 font-semibold text-black border-2 rounded-3xl outline-none transition-all ${
-          error ? "border-red-500" : "border-gray-500 hover:border-black"
-        }`}
+        className={`p-4 font-semibold text-black border-2 rounded-3xl outline-none transition-all ${error ? "border-red-500" : "border-gray-500 hover:border-black"
+          }`}
       />
       {error && <p className="text-red-500 text-sm ml-4">{error}</p>}
     </div>

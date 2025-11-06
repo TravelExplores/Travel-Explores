@@ -4,7 +4,7 @@ function Footer() {
         <section className=" w-full  h-full bg-black flex items-center justify-start flex-col">
             <div className=" mt-10 flex items-center justify-center flex-col md:flex-row w-full">
                 <h1 className=" text-2xl md:text-3xl font-semibold text-[#fca311]">Need help? Call Us On :</h1>
-                <div className=" ml-10 mt-1 flex flex-col gap-2"><a className=" font-medium text-[1.3rem] md:text-xl hover:underline hover:text-blue-500 transition-all" href="tel:+919557778843">+919557778843</a><a className="font-medium text-[1.3rem] md:text-xl hover:underline hover:text-blue-500 transition-all" href="tel:+919557778843">+916306938079</a></div>
+                <div className=" ml-10 mt-1 flex flex-col gap-2"><div className=" flex flex-row items-center justify-center gap-2"><i className=" text-gray-600 font-bold fa-solid fa-phone"></i><a className=" font-medium text-[1.3rem] md:text-xl hover:underline hover:text-blue-500 transition-all" href="tel:+919557778843">+919557778843</a></div><div className="flex flex-row items-center justify-center gap-2"><i className=" text-gray-600 font-bold fa-solid fa-phone"></i><a className="font-medium text-[1.3rem] md:text-xl hover:underline hover:text-blue-500 transition-all" href="tel:+919557778843">+916306938079</a></div></div>
             </div>
 
             <div className=" border-b-2 border-gray-500 w-[80%] mt-10">
@@ -19,7 +19,10 @@ function Footer() {
                         <span className=" font-medium text-gray-600">Gali No.3, Chander Nagar, Near Asha Modern School ( Main Branch )Saharanpur 247001</span>
                     </div>
                     <div className=" flex flex-row gap-4"><i className="fa-solid font-semibold fa-envelope text-gray-400 text-xl"></i>
-                        <span className=" font-medium text-gray-600">infotravelexplores@gmail.com</span>
+                        <span className=" font-medium text-gray-600"><a href="mailto:info@travelexplores.com" className="text-blue-600 hover:underline">
+                            info@travelexplores.com
+                        </a>
+                        </span>
                     </div>
 
                     <h2 className=" font-semibold text-white text-xl">Follow Us:</h2>
@@ -34,9 +37,9 @@ function Footer() {
                     </div>
                 </div>
 
-              <div className=" border-b-2 border-gray-500 w-[80%] mt-10">
-            </div>
-             <span className="  mt-10 font-medium text-white mb-20">© 2025 Travel Explores. All rights reserved.</span>
+                <div className=" border-b-2 border-gray-500 w-[80%] mt-10">
+                </div>
+                <span className="  mt-10 font-medium text-white mb-20">© 2025 Travel Explores. All rights reserved.</span>
 
             </div>
         </section>
