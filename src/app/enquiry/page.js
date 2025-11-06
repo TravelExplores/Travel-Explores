@@ -1,4 +1,7 @@
 // /enquiry/page.jsx
+
+"use client";
+
 import { Suspense } from "react";
 import EnquiryForm from "../../../components/Form"
 
