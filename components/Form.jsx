@@ -62,8 +62,8 @@ export default function EnquiryForm({ city }) {
   };
 
   return (
-    <section className="w-full h-screen flex items-center justify-center">
-      <div className="h-fit w-full flex flex-col gap-5 bg-[#F2F2F6] items-center">
+    <section className="w-full h-screen flex items-center justify-center md:mt-1 mt-32">
+      <div className="h-fit w-full flex flex-col gap-5 bg-[#F2F2F6] items-center ">
         <h1 className="text-3xl m-7 text-black font-bold mt-10">Ask Query</h1>
 
         <form
