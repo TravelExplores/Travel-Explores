@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function EnquiryForm({ city }) {
   const [btn, setBtn] = useState(false);
   const [today, setToday] = useState("");
+  const dateRef = useRef(null); // Ref for date input
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -14,18 +15,15 @@ export default function EnquiryForm({ city }) {
   });
   const [errors, setErrors] = useState({});
 
-  // Set today's date
   useEffect(() => {
     setToday(new Date().toISOString().split("T")[0]);
   }, []);
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Basic validation
   const validate = () => {
     const newErrors = {};
     if (!form.name.trim()) newErrors.name = "Full name is required";
@@ -37,7 +35,6 @@ export default function EnquiryForm({ city }) {
     return newErrors;
   };
 
-  // Handle submit
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validate();
@@ -49,13 +46,13 @@ export default function EnquiryForm({ city }) {
       `Hello! I'd like to ask a query:\n*Name:* ${form.name}\n*Phone:* ${form.phone}\n${form.email ? `*Email:* ${form.email}\n` : ""}*Destination:* ${city}\n*Tour Date:* ${form.date}\n*Guests:* ${form.guests}`
     );
 
-    const phoneNumber = "918881509360"; // Include country code
+    const phoneNumber = "918881509360";
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, "_blank");
   };
 
   return (
-    <section className="w-full flex items-center justify-center">
+    <section className="w-full h-screen flex items-center justify-center">
       <div className="h-fit w-full flex flex-col gap-5 bg-[#F2F2F6] items-center">
         <h1 className="text-3xl m-7 text-black font-bold mt-10">Ask Query</h1>
 
@@ -107,6 +104,8 @@ export default function EnquiryForm({ city }) {
             onChange={handleChange}
             error={errors.date}
             min={today}
+            inputRef={dateRef}       // pass ref
+            openOnClick={true}       // custom prop to enable open on click
           />
 
           {/* Guests */}
@@ -160,7 +159,19 @@ export default function EnquiryForm({ city }) {
 }
 
 // Reusable field component
-function FormField({ label, icon, name, type = "text", value, onChange, placeholder, error, min }) {
+function FormField({
+  label,
+  icon,
+  name,
+  type = "text",
+  value,
+  onChange,
+  placeholder,
+  error,
+  min,
+  inputRef,      // new prop
+  openOnClick,   // new prop
+}) {
   return (
     <div className="w-[80%] md:w-full flex flex-col gap-1">
       <span className="font-semibold text-gray-400 ml-4">
@@ -173,6 +184,12 @@ function FormField({ label, icon, name, type = "text", value, onChange, placehol
         onChange={onChange}
         placeholder={placeholder}
         min={min}
+        ref={inputRef}   // attach ref
+        onClick={() => {
+          if (openOnClick && inputRef?.current?.showPicker) {
+            inputRef.current.showPicker(); // opens calendar on click
+          }
+        }}
         className={`p-4 font-semibold text-black border-2 rounded-3xl outline-none transition-all ${
           error ? "border-red-500" : "border-gray-500 hover:border-black"
         }`}
