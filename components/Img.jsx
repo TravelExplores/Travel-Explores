@@ -10,7 +10,7 @@ const bn2 =
   "https://res.cloudinary.com/daolgjqnn/image/upload/v1762431877/sarang-pande-IijeyJbmrec-unsplash_qseoep.jpg";
 
 const bn3 =
-  "https://res.cloudinary.com/daolgjqnn/image/upload/v1762431757/sukant-sharma-b6rs6V_9lH4-unsplash_vuyoks.jpg";
+  "https://res.cloudinary.com/daolgjqnn/image/upload/v1762441379/i_itreya.jpg";
 
 const bn4 = "https://res.cloudinary.com/daolgjqnn/image/upload/v1762431939/praneet-kumar-H8dcf-v98mA-unsplash_zaklhx.jpg";
 
