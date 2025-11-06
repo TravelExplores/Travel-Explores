@@ -24,14 +24,24 @@ export default function EnquiryForm({ city }) {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
+  // Updated validation: email is now required
   const validate = () => {
     const newErrors = {};
     if (!form.name.trim()) newErrors.name = "Full name is required";
+
     if (!form.phone.trim()) newErrors.phone = "Phone number is required";
     else if (!/^[0-9]{10}$/.test(form.phone))
       newErrors.phone = "Enter a valid 10-digit number";
+
+    if (!form.email.trim()) newErrors.email = "Email is required";
+    else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(form.email)
+    )
+      newErrors.email = "Enter a valid email address";
+
     if (!form.date) newErrors.date = "Please select a tour date";
     if (!form.guests) newErrors.guests = "Please select number of guests";
+
     return newErrors;
   };
 
@@ -43,7 +53,7 @@ export default function EnquiryForm({ city }) {
     if (Object.keys(validationErrors).length > 0) return;
 
     const message = encodeURIComponent(
-      `Hello! I'd like to ask a query:\n*Name:* ${form.name}\n*Phone:* ${form.phone}\n${form.email ? `*Email:* ${form.email}\n` : ""}*Destination:* ${city}\n*Tour Date:* ${form.date}\n*Guests:* ${form.guests}`
+      `Hello! I'd like to ask a query:\n*Name:* ${form.name}\n*Phone:* ${form.phone}\n*Email:* ${form.email}\n*Destination:* ${city}\n*Tour Date:* ${form.date}\n*Guests:* ${form.guests}`
     );
 
     const phoneNumber = "918881509360";
@@ -83,15 +93,16 @@ export default function EnquiryForm({ city }) {
             placeholder="Mobile No."
           />
 
-          {/* Email */}
+          {/* Email (Required) */}
           <FormField
-            label="Email ID (optional)"
+            label="Email ID"
             icon="fa-envelope"
             name="email"
             type="email"
             value={form.email}
             onChange={handleChange}
-            placeholder="Email"
+            error={errors.email}
+            placeholder="Enter Email"
           />
 
           {/* Tour Date */}
