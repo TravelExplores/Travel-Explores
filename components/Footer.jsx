@@ -14,7 +14,7 @@ function Footer() {
                 <div className=" w-full h-40 flex items-center justify-center">
                     <img src="/logo.png" className=" h-full  object-cover" alt="" />
                 </div>
-                <div className=" mt-5 gap-6 flex w-[90%] flex-col items-start justify-start">
+                <div className=" mt-5 gap-6 flex w-[95%] flex-col items-start justify-start">
                     <div className=" flex flex-row gap-4"><i className=" font-semibold text-gray-400 text-xl fa-solid fa-location-dot"></i>
                         <span className=" font-medium text-gray-600">Gali No.3, Chander Nagar, Near Asha Modern School ( Main Branch )Saharanpur 247001</span>
                     </div>
@@ -28,7 +28,7 @@ function Footer() {
 
                         // Open WhatsApp
                         window.open(url, "_blank");
-                    }}>a</a>
+                    }}></a>
                         <a href="https://www.instagram.com/travelexplores5"
                         ><i className="fa-brands font-semibold text-3xl cursor-pointer hover:text-white transition-all text-gray-500 fa-instagram"></i></a>
                     </div>
