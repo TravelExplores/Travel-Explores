@@ -6,6 +6,8 @@ export const metadata = {
   description:
     "Explore breathtaking travel destinations, guides, and experiences with Travel Explores. Start your next adventure today!",
   keywords: [
+    "travel explores",
+    "travel explore",
     "travel",
     "exploration",
     "adventure",
@@ -22,7 +24,7 @@ export const metadata = {
     siteName: "Travel Explores",
     images: [
       {
-        url: "./logo.png",
+        url: "/logo.png",
         width: 800,
         height: 600,
         alt: "Travel Explores logo",
@@ -32,7 +34,9 @@ export const metadata = {
     type: "website",
   },
   icons: {
-    icon: "./logo.png",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
@@ -40,6 +44,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+
+      <head>
+        <link rel="icon" href="/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
+      </head>
+
+
       <body className="bg-[#F2F2F6]">
         {children}
 
