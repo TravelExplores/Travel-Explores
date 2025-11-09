@@ -7,7 +7,7 @@ const bn1 =
   "https://res.cloudinary.com/daolgjqnn/image/upload/v1762694476/view-starry-night-sky-with-nature-mountains-landscape_mhlcwo.jpg";
 
 const bn2 =
-  "https://res.cloudinary.com/daolgjqnn/image/upload/v1762695433/pexels-eberhardgross-572897_upcdm6.jpg";
+  "https://res.cloudinary.com/daolgjqnn/image/upload/v1762696234/pexels-eberhardgross-572897_ri7q2c.jpg";
 
 const bn3 =
   "https://res.cloudinary.com/daolgjqnn/image/upload/v1762695577/beautiful-nature-landscape-with-river-mountains_bdcitp.jpg";
