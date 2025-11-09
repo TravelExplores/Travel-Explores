@@ -24,30 +24,30 @@ function Nav() {
   };
 
   return (
-    <nav className="fixed top-0 z-50 w-full flex items-center bg-black/95 backdrop-blur-2xl">
+    <nav className=" absolute top-0 z-50 w-full flex items-center backdrop-blur-2xl">
       {isDesktop ? (
         <div className="flex justify-between items-center h-16 w-full px-10">
           {/* Logo */}
-          <div className="flex items-center">
-            <img src="/logo.png" alt="Logo" className="h-20 w-auto object-contain" />
+          <div className="flex items-center ">
+            <a href="/"><img src="/logo.png" alt="Logo" className="h-20 w-auto object-contain" /></a>
           </div>
 
           {/* Menu */}
-          <ul className="flex gap-10 items-center">
+          <ul className="flex gap-10  w-full h-full justify-center items-center">
             <li>
-              <Link href="/" className="text-white text-lg hover:text-gray-300 transition">
+              <Link href="/" className="text-white font-medium text-xl shrink-0 hover:text-gray-100 hover:text-[1.4rem] transition-all">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-white text-lg hover:text-gray-300 transition">
+              <Link href="/about" className="text-white shrink-0  font-medium text-xl hover:text-gray-100 hover:text-[1.4rem] transition-all">
                 About
               </Link>
             </li>
             <li>
               <button
                 onClick={() => scrollToSection("domestic")}
-                className="text-white text-lg cursor-pointer hover:text-gray-300 transition"
+                className="text-white  font-medium text-xl shrink-0 cursor-pointer hover:text-gray-100 hover:text-[1.4rem] transition-all"
               >
                 Domestic
               </button>
@@ -55,7 +55,7 @@ function Nav() {
             <li>
               <button
                 onClick={() => scrollToSection("international")}
-                className="text-white text-lg hover:text-gray-300 cursor-pointer transition"
+                className="text-white  font-medium text-xl shrink-0 hover:text-gray-100 hover:text-[1.4rem] cursor-pointer transition-all"
               >
                 International
               </button>
@@ -63,7 +63,7 @@ function Nav() {
           </ul>
         </div>
       ) : (
-        <div className="flex justify-between items-center h-16 w-full px-5 bg-black/90">
+        <div className="flex justify-between items-center h-16 w-full px-5 backdrop-blur-2xl ">
           {/* Logo */}
           <div className="flex items-center justify-center h-full w-[5rem]">
             <img src="/logo.png" alt="Logo" className="h-full w-auto object-contain" />

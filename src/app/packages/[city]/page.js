@@ -6,6 +6,7 @@ import Footer from "../../../../components/Footer";
 import Last from "../../../../components/Last";
 import Nav from "../../../../components/Nav";
 import PolicyAccordion from "../../../../components/PolicyAccordion";
+import Nav2 from "../../../../components/Nav2";
 
 export default function InfoPage() {
   const { city } = useParams();
@@ -48,6 +49,7 @@ export default function InfoPage() {
   return (
     <>
       <Nav />
+      <Nav2/>
       <div className="min-h-screen bg-[#F8F9FA] pt-6 md:pt-12 w-full">
         <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-lg p-8 mt-5">
           <img

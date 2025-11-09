@@ -29,8 +29,8 @@ export default function Nav2() {
       duration: 1.5,
       scrollTrigger: {
         trigger: navRef.current,
-        start: "top -10%",
-        end: "top -35%",
+        start: "top -15%",
+        end: "top -25%",
         scrub: true,
       },
     });
@@ -43,15 +43,22 @@ export default function Nav2() {
 
   const isDesktop = windowWidth > 1100;
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav
       ref={navRef}
-      className="opacity-0 fixed top-0 z-20 w-full flex items-center justify-between h-16 bg-[#1D1D1F]/50 border-b-2 border-[#495057] backdrop-blur-3xl transition-all"
+      className="opacity-0 fixed top-0 z-40 w-full flex items-center justify-between h-16 bg-black/70   backdrop-blur-3xl transition-all"
     >
       {isDesktop ? (
         <div className="navbar w-full flex justify-between items-center px-10">
           {/* Logo */}
-          <div className="flex items-center justify-center h-full w-24">
+          <div className="flex items-center justify-center h-[40%] w-24">
             <img
               src="/logo.png"
               className="h-full w-full object-contain"
@@ -60,26 +67,32 @@ export default function Nav2() {
           </div>
 
           {/* Menu */}
-          <ul className="flex gap-10">
+          <ul className="flex gap-10 w-full justify-center items-center">
             <li>
-              <Link href="/" className="text-xl text-white hover:text-gray-300 transition">
+              <Link href="/" className="text-xl shrink-0 hover:text-gray-100 hover:text-[1.4rem] transition-all text-white ">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="#about" className="text-xl text-white hover:text-gray-300 transition">
+              <Link href="/about" className="text-xl shrink-0 hover:text-gray-100 hover:text-[1.4rem] transition-all text-white ">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/domestic" className="text-xl text-white hover:text-gray-300 transition">
-                Domestic Tours
-              </Link>
+              <button
+                onClick={() => scrollToSection("domestic")}
+                className="text-white  font-medium text-xl shrink-0 hover:text-gray-100 hover:text-[1.4rem] cursor-pointer transition-all"
+              >
+                Domestic
+              </button>
             </li>
             <li>
-              <Link href="/international" className="text-xl text-white hover:text-gray-300 transition">
-                International Tours
-              </Link>
+               <button
+                onClick={() => scrollToSection("international")}
+                className="text-white  font-medium text-xl shrink-0 hover:text-gray-100 hover:text-[1.4rem] cursor-pointer transition-all"
+              >
+                International
+              </button>
             </li>
           </ul>
         </div>
@@ -98,7 +111,7 @@ export default function Nav2() {
             <Link href="/" className="text-white text-lg font-semibold">
               Home
             </Link>
-            <Link href="#about" className="text-white text-lg font-semibold">
+            <Link href="/about" className="text-white text-lg font-semibold">
               About
             </Link>
 

@@ -11,6 +11,7 @@ import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Nav2 from '../../../components/Nav2';
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -67,6 +68,7 @@ export default function page() {
     return (
         <section className='w-full  bg-[#F2F4F6] pt-2 flex items-center flex-col gap-20 justify-start'>
             <Nav />
+            <Nav2/>
             <div ref={txtt} className=' flex flex-col w-full items-center justify-start  '>
 
                 <div className=' grid grid-cols-1 lg:grid-cols-2 justify-items-center place-items-center gap-6 w-full mt-20'>
