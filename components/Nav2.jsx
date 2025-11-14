@@ -41,7 +41,7 @@ export default function Nav2({ open, setOpen }) {
     };
   }, []);
 
-  const isDesktop = windowWidth > 1100;
+  const isDesktop = windowWidth > 700;
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -90,19 +90,19 @@ export default function Nav2({ open, setOpen }) {
               </Link>
             </li>
           </ul>
-          <div className=" h-14 w-44 rounded-2xl bg-[#FB5B32] cursor-pointer hover:bg-black transition-all ease-in-out flex items-center justify-center">
+          <Link href="/enquiry"><div className=" h-14 w-44 rounded-2xl bg-[#FB5B32] cursor-pointer hover:bg-black transition-all ease-in-out flex items-center justify-center">
             <h1 className=" font-semibold text-white">Book Now</h1> 
-          </div>
+          </div></Link>
         </div>
       ) : (
         // ✅ Mobile Navbar
         <div className="flex justify-between items-center w-full h-16 px-5">
           <div className="flex items-center h-full w-[5rem]">
-            <img
+            <a href="/"><img
               src="/logo.png"
               className="h-full w-auto object-contain"
               alt="Logo"
-            />
+            /></a>
           </div>
 
           <div className="flex items-center gap-5">

@@ -24,8 +24,8 @@ export default function Card({ city, img }) {
         className="h-full w-full object-cover hover:scale-105 cursor-pointer transition-all ease-in-out object-top object-center"
       />
 
-      <div className="bg-white rounded-2xl border-none outline-none absolute flex items-start justify-start flex-col bottom-0 z-10 h-[13rem] w-full">
-        <h1 className="font-bold text-2xl text-black m-5">{`${city} Tour Package`}</h1>
+      <div className="bg-white rounded-2xl border-none outline-none absolute flex items-start justify-start flex-col bottom-0 z-10 h-fit pb-5 w-full">
+        <h1 className="font-bold text-xl text-black m-5">{`${city} Tour Package`}</h1>
         <h2 className="font-semibold text-xl text-gray-500 ml-5">{city}</h2>
 
         <div className="flex flex-row w-full items-center">

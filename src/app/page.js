@@ -14,6 +14,7 @@ import Service from "../../components/Service";
 import Side from "../../components/Side";
 import Testimonial from "../../components/Testimonial";
 import Why from "../../components/Why";
+import EnquiryForm2 from "../../components/Form2";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -22,12 +23,12 @@ export default function Home() {
     <section className=" w-full">
 
       <Nav open={open} setOpen={setOpen} />
-     <Side open={open} setOpen={setOpen} />
+      <Side open={open} setOpen={setOpen} />
 
-      <Nav2  open={open} setOpen={setOpen} />
+      <Nav2 open={open} setOpen={setOpen} />
 
       <Img />
-      <Form />
+      <EnquiryForm2/>
       <Hero />
       <Hero2 />
       <Service />

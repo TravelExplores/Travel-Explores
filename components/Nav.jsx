@@ -56,9 +56,10 @@ function Nav({ open, setOpen }) {
               </Link>
             </li>
           </ul>
-          <div className=" h-14 w-44 rounded-2xl bg-[#FB5B32] cursor-pointer hover:bg-black transition-all ease-in-out flex items-center justify-center">
+          <Link href="/enquiry"><div className=" h-14 w-44 rounded-2xl bg-[#FB5B32] cursor-pointer hover:bg-black transition-all ease-in-out flex items-center justify-center">
             <h1 className=" font-semibold text-white">Book Now</h1>
           </div>
+          </Link>
         </div>
       ) : (
         <div className="flex justify-between items-center h-16 w-full px-5 backdrop-blur-2xl ">

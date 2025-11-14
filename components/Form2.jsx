@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import Nav from "./Nav";
-import Side from "./Side";
-import Nav2 from "./Nav2";
 
-export default function EnquiryForm({ city }) {
+
+export default function EnquiryForm2({ city }) {
   const [btn, setBtn] = useState(false);
   const [today, setToday] = useState("");
   const [open, setOpen] = useState(false);
@@ -66,12 +64,7 @@ export default function EnquiryForm({ city }) {
   };
 
   return (
-    <section className="w-full md:h-screen h-[60rem] relative md:mt-0 flex items-center justify-center ">
-      
-            <Nav open={open} setOpen={setOpen} />
-            <Side open={open} setOpen={setOpen} />
-      
-            <Nav2 open={open} setOpen={setOpen} />
+    <section className="w-full md:h-screen h-[50rem] relative md:mt-0 flex items-center justify-center ">
       <div className="md:h-[26rem] h-[46rem] rounded-4xl flex  w-[90%] flex-col gap-5 bg-[#151515] items-center ">
         <h1 className="text-md md:text-3xl m-2 text-white font-bold mt-10">Find adventure that suits your needs</h1>
 
