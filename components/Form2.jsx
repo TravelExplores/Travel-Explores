@@ -58,7 +58,7 @@ export default function EnquiryForm2({ city }) {
       `Hello! I'd like to ask a query:\n*Name:* ${form.name}\n*Phone:* ${form.phone}\n*Email:* ${form.email}\n*Destination:* ${city}\n*Tour Date:* ${form.date}\n*Guests:* ${form.guests}`
     );
 
-    const phoneNumber = "918881509360";
+    const phoneNumber = "919557778843";
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, "_blank");
   };

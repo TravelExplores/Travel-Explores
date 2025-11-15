@@ -93,12 +93,11 @@ export default function InfoPage() {
           </div>
 
           <div className=" flex justify-end items-end">
-          <div className=" h-13 md:h-14 cursor-pointer hover:bg-[#FB5B32]/80 transition-all ease-in-out rounded-2xl flex items-center justify-center w-48 bg-[#FB5B32]">
-             <a
+          <a
               href="tel:+919557778843"
-            ><h1 className=" font-semibold text-xl">Call Now</h1></a>
-
-          </div>
+            ><div className=" h-13 md:h-14 cursor-pointer hover:bg-[#FB5B32]/80 transition-all ease-in-out rounded-2xl flex items-center justify-center w-48 bg-[#FB5B32]">
+             <h1 className=" font-semibold text-xl">Call Now</h1>
+          </div></a>
           </div>
         </div>
 
