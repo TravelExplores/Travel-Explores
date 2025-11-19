@@ -70,12 +70,12 @@ export default function Nav2({ open, setOpen }) {
           {/* Menu */}
           <ul className="flex gap-10 w-full justify-center items-center">
             <li>
-              <Link href="/" className="text-xl font-semibold shrink-0 hover:text-gray-100 hover:text-[1.4rem] transition-all text-black">
+              <Link href="/" className="text-xl font-semibold shrink-0 hover:text-black/60 hover:text-[1.4rem] transition-all text-black">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-xl font-semibold shrink-0 hover:text-gray-100 hover:text-[1.4rem] transition-all text-black ">
+              <Link href="/about" className="text-xl font-semibold shrink-0 hover:text-black/60 hover:text-[1.4rem] transition-all text-black ">
                 About
               </Link>
             </li>
