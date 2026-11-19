@@ -17,7 +17,7 @@ function Review({url,name,des,group}){
               key={i}
               type="radio"
               name={`rating-${group}`} // same name per review
-              className="mask mask-star-2 bg-orange-400"
+              className="mask mask-star-2 bg-blue-400"
             defaultChecked={name === "Rudresh" || name === "Adarsh" ? i === 3 : i === 5}
 
               aria-label={`${i} star`}

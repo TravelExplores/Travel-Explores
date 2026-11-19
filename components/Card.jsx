@@ -13,7 +13,7 @@ export default function Card({ city, img, days = "Custom itinerary", des = "A me
       <div className="absolute inset-0 bg-gradient-to-t from-[#071622] via-[#071622]/35 to-transparent" />
       <div className="absolute left-5 top-5 rounded-full border border-white/25 bg-white/15 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">{type === "international" ? "International" : "Domestic"}</div>
       <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-        <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#ffb49e]"><span>✦</span>{days}</div>
+        <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#a9d3ff]"><span>✦</span>{days}</div>
         <h3 className="text-3xl font-black tracking-tight">{city}</h3>
         <p className="mt-2 line-clamp-2 text-sm leading-6 text-white/75">{des}</p>
         <div className="mt-5 flex items-center justify-between border-t border-white/20 pt-4 text-sm font-bold"><span>View itinerary</span><span className="text-xl transition group-hover:translate-x-1">→</span></div>

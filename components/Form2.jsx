@@ -46,7 +46,7 @@ export default function EnquiryForm2({ city = "" }) {
   return (
     <div className="hero-form w-full max-w-md rounded-[2rem] border border-white/25 bg-[#071827]/72 p-5 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-7 lg:max-w-[24rem]">
       <div className="mb-5">
-        <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#ff9b7d]">Start planning</p>
+        <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#a9d3ff]">Start planning</p>
         <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-white">Tell us your dream trip</h2>
         <p className="mt-1 text-sm text-white/60">Our travel expert will get back to you shortly.</p>
       </div>
@@ -61,7 +61,7 @@ export default function EnquiryForm2({ city = "" }) {
           <Field label="Destination" name="destination" type="select" value={form.destination} onChange={handleChange} error={errors.destination} options={["Goa", "Kerala", "Dubai", "Varanasi", "Rajasthan", "Other"].map((value) => ({ value, label: value }))} />
           <Field label="Travel date" name="date" type="date" value={form.date} onChange={handleChange} min={today} error={errors.date} />
         </div>
-        <button type="submit" className="mt-2 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#ff6d43] px-5 py-3.5 font-bold text-white shadow-lg shadow-[#ff6d43]/20 transition hover:-translate-y-0.5 hover:bg-[#ff805e]">
+        <button type="submit" className="mt-2 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#1877d2] px-5 py-3.5 font-bold text-white shadow-lg shadow-[#1877d2]/20 transition hover:-translate-y-0.5 hover:bg-[#1264b5]">
           {sent ? "Request opened in WhatsApp ✓" : "Plan my journey →"}
         </button>
       </form>
@@ -70,7 +70,7 @@ export default function EnquiryForm2({ city = "" }) {
 }
 
 function Field({ label, name, type = "text", value, onChange, placeholder, error, options, min }) {
-  const shared = { name, value, onChange, className: `w-full rounded-xl border bg-white/10 px-3 py-2.5 text-sm text-white outline-none transition placeholder:text-white/35 focus:border-[#ff8c68] focus:bg-white/15 ${error ? "border-red-400" : "border-white/15"}` };
+  const shared = { name, value, onChange, className: `w-full rounded-xl border bg-white/10 px-3 py-2.5 text-sm text-white outline-none transition placeholder:text-white/35 focus:border-[#7db9f3] focus:bg-white/15 ${error ? "border-red-400" : "border-white/15"}` };
   return (
     <label className="block text-xs font-semibold text-white/70">
       <span className="mb-1.5 block">{label}</span>

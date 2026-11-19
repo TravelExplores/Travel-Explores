@@ -88,12 +88,12 @@ export default function Nav2({ open, setOpen }) {
               <Link href="/international" className="text-black shrink-0  font-semibold text-xl hover:text-black/60 hover:text-[1.4rem] transition-all">
                 International
               </Link>
-              <Link href="/contact" className="rounded-full border-2 border-[#ff6d43] px-4 py-2 text-sm font-bold text-[#ef633f] transition hover:bg-[#ff6d43] hover:text-white">
+              <Link href="/contact" className="rounded-full border-2 border-[#1877d2] px-4 py-2 text-sm font-bold text-[#1877d2] transition hover:bg-[#1877d2] hover:text-white">
                 Contact Us
               </Link>
             </li>
           </ul>
-          <Link href="/enquiry"><div className=" h-14 w-44 rounded-2xl bg-[#FB5B32] cursor-pointer hover:bg-black transition-all ease-in-out flex items-center justify-center">
+          <Link href="/enquiry"><div className=" h-14 w-44 rounded-2xl bg-[#1877d2] cursor-pointer hover:bg-black transition-all ease-in-out flex items-center justify-center">
             <h1 className=" font-semibold text-white">Book Now</h1> 
           </div></Link>
         </div>

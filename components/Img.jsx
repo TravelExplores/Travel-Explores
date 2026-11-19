@@ -33,13 +33,13 @@ export default function Img() {
 
       <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1600px] flex-col justify-between gap-10 px-5 pb-8 pt-28 sm:px-8 lg:flex-row lg:items-center lg:gap-16 lg:px-14 lg:pb-14 lg:pt-28">
         <div className="flex max-w-2xl flex-col justify-center lg:min-h-[68vh]">
-          <div className="mb-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.28em] text-[#ffb39b]"><span className="h-px w-10 bg-[#ff6d43]" /> Curated escapes · unforgettable memories</div>
-          <h1 className="max-w-xl text-5xl font-black leading-[0.94] tracking-[-0.05em] sm:text-6xl lg:text-8xl">Welcome to <span className="text-[#ff7348]">Travel</span> Explores</h1>
+          <div className="mb-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.28em] text-[#a9d3ff]"><span className="h-px w-10 bg-[#1877d2]" /> Curated escapes · unforgettable memories</div>
+          <h1 className="max-w-xl text-5xl font-black leading-[0.94] tracking-[-0.05em] sm:text-6xl lg:text-8xl">Welcome to <span className="text-[#73b7ff]">Travel</span> Explores</h1>
           <p className="mt-7 max-w-lg text-base leading-7 text-white/80 sm:text-lg">Find your next beautiful escape, from sunlit beaches to misty hills. Pick a city, tell us what you need, and we&apos;ll shape the perfect journey around you.</p>
           <div className="mt-9 flex flex-wrap items-center gap-3 text-sm font-semibold text-white/85"><span className="rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-md">✦ Handpicked destinations</span><span className="rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-md">24/7 trip support</span></div>
-          <a href="#city-packages" className="mt-10 inline-flex w-fit items-center gap-3 rounded-full bg-[#ff6d43] px-6 py-3 font-bold text-white shadow-lg shadow-[#ff6d43]/25 transition hover:-translate-y-1 hover:bg-[#ff805e]">Explore city packages <span aria-hidden="true">↓</span></a>
+          <a href="#city-packages" className="mt-10 inline-flex w-fit items-center gap-3 rounded-full bg-[#1877d2] px-6 py-3 font-bold text-white shadow-lg shadow-[#1877d2]/25 transition hover:-translate-y-1 hover:bg-[#1264b5]">Explore city packages <span aria-hidden="true">↓</span></a>
           <div className="mt-10 flex items-center gap-3" aria-label="Featured cities">
-            {citySlides.map((slide, index) => <button key={slide.city} onClick={() => setActive(index)} aria-label={`Show ${slide.city}`} className={`group flex items-center gap-2 rounded-full border px-2 py-1.5 text-xs font-bold transition ${active === index ? "border-white/60 bg-white/20 text-white" : "border-white/15 text-white/55 hover:border-white/40"}`}><span className={`h-2 w-2 rounded-full ${active === index ? "bg-[#ff805e]" : "bg-white/40"}`} />{slide.city}</button>)}
+            {citySlides.map((slide, index) => <button key={slide.city} onClick={() => setActive(index)} aria-label={`Show ${slide.city}`} className={`group flex items-center gap-2 rounded-full border px-2 py-1.5 text-xs font-bold transition ${active === index ? "border-white/60 bg-white/20 text-white" : "border-white/15 text-white/55 hover:border-white/40"}`}><span className={`h-2 w-2 rounded-full ${active === index ? "bg-[#1264b5]" : "bg-white/40"}`} />{slide.city}</button>)}
           </div>
         </div>
         <Form2 />

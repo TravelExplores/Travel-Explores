@@ -43,7 +43,7 @@ export default function Side({ open, setOpen }) {
                     <Link onClick={() => setOpen(false)} href="/international" className="text-2xl hover:text-gray-500 transition-all">
                         International
                     </Link>
-                    <Link onClick={() => setOpen(false)} href="/contact" className="text-2xl text-[#ef633f] hover:text-gray-500 transition-all">
+                    <Link onClick={() => setOpen(false)} href="/contact" className="text-2xl text-[#1877d2] hover:text-gray-500 transition-all">
                         Contact Us
                     </Link>
                 </div>
