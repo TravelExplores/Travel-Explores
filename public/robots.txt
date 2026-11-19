@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://travelexplores.com
+
+# Sitemaps
+Sitemap: https://travelexplores.com/sitemap.xml

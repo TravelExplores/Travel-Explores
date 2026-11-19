@@ -1,0 +1,9 @@
+import { NextResponse } from "next/server";
+import connectToDatabase from "../../lib/mongodb";
+import Package from "../../models/Package";
+import { requireAdmin } from "../../lib/auth";
+
+export const dynamic = "force-dynamic";
+function unavailable(error) { if (!["MONGODB_URI_MISSING", "MONGODB_CONNECTION_FAILED"].includes(error.code)) return null; return NextResponse.json({ error: "Package storage is unavailable. Configure MONGODB_URI in the server environment." }, { status: 503 }); }
+export async function GET(req) { try { const includeUnpublished = new URL(req.url).searchParams.get("admin") === "1"; if (includeUnpublished) await requireAdmin(); await connectToDatabase(); const filter = includeUnpublished ? {} : { published: { $ne: false }, city: { $not: /^USA$/i } }; return NextResponse.json(await Package.find(filter).lean()); } catch (error) { if (error.message === "ADMIN_UNAUTHORIZED") return NextResponse.json({ error: "Admin authorization required" }, { status: 401 }); return unavailable(error) || NextResponse.json({ error: "Failed to fetch packages" }, { status: 500 }); } }
+export async function POST(req) { try { await requireAdmin(); await connectToDatabase(); const body = await req.json(); if (!body.city || !body.type) return NextResponse.json({ error: "City and package type are required" }, { status: 400 }); const exists = await Package.findOne({ city: body.city }); if (exists) return NextResponse.json({ error: "Package already exists" }, { status: 400 }); return NextResponse.json(await Package.create({ ...body, published: body.published !== false }), { status: 201 }); } catch (error) { if (error.message === "ADMIN_UNAUTHORIZED") return NextResponse.json({ error: "Admin authorization required" }, { status: 401 }); return unavailable(error) || NextResponse.json({ error: "Failed to add package" }, { status: 500 }); } }
